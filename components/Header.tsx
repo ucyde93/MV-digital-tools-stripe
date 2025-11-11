@@ -1,5 +1,6 @@
 
-import React from 'react';
+
+import * as React from 'react';
 // FIX: Import `../types` for its side-effects to load global type augmentations.
 import '../types';
 

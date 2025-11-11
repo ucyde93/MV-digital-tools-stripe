@@ -1,4 +1,4 @@
-import React, { useState, useRef, useEffect } from 'react';
+import * as React from 'react';
 // FIX: Import `../types` for its side-effects to load global type augmentations for custom elements like <stripe-pricing-table>.
 import '../types';
 import type { PricingCategory } from '../types';
@@ -13,12 +13,12 @@ interface TabIndicatorStyle {
 }
 
 export const TabbedPricing: React.FC<TabbedPricingProps> = ({ categories }) => {
-  const [activeCategoryName, setActiveCategoryName] = useState(categories[0]?.name);
-  const [indicatorStyle, setIndicatorStyle] = useState<TabIndicatorStyle | null>(null);
-  const tabsRef = useRef<(HTMLButtonElement | null)[]>([]);
-  const tabsContainerRef = useRef<HTMLDivElement>(null);
+  const [activeCategoryName, setActiveCategoryName] = React.useState(categories[0]?.name);
+  const [indicatorStyle, setIndicatorStyle] = React.useState<TabIndicatorStyle | null>(null);
+  const tabsRef = React.useRef<(HTMLButtonElement | null)[]>([]);
+  const tabsContainerRef = React.useRef<HTMLDivElement>(null);
 
-  useEffect(() => {
+  React.useEffect(() => {
     const activeTabIndex = categories.findIndex(c => c.name === activeCategoryName);
     const activeTab = tabsRef.current[activeTabIndex];
     const container = tabsContainerRef.current;
@@ -45,10 +45,10 @@ export const TabbedPricing: React.FC<TabbedPricingProps> = ({ categories }) => {
             // FIX: The ref callback function must not return a value. The original concise arrow function `el => tabsRef.current[index] = el` implicitly returned the result of the assignment, which is `el`. By adding curly braces, we create a function body that returns `undefined` (which is assignable to `void`).
             ref={el => { tabsRef.current[index] = el; }}
             onClick={() => setActiveCategoryName(category.name)}
-            className={`relative px-3 md:px-5 py-4 text-sm md:text-base font-medium transition-colors duration-300 focus:outline-none focus-visible:ring-2 focus-visible:ring-indigo-400 focus-visible:ring-offset-2 focus-visible:ring-offset-black rounded-t-md ${
+            className={`relative px-3 md:px-5 py-4 text-sm md:text-base font-medium transition-all duration-300 ease-in-out focus:outline-none focus-visible:ring-2 focus-visible:ring-indigo-400 focus-visible:ring-offset-2 focus-visible:ring-offset-black rounded-t-md transform ${
               activeCategoryName === category.name
                 ? 'text-white'
-                : 'text-slate-400 hover:text-white'
+                : 'text-slate-400 hover:text-white hover:bg-white/5 hover:scale-[1.02]'
             }`}
             aria-current={activeCategoryName === category.name ? 'page' : undefined}
           >

@@ -1,7 +1,9 @@
 
-import React from 'react';
+
+import * as React from 'react';
 import { Header } from './components/Header';
 import { TabbedPricing } from './components/TabbedPricing';
+import { HowItWorks } from './components/HowItWorks';
 import { FAQ } from './components/FAQ';
 import type { PricingCategory } from './types';
 // FIX: Import 'types.ts' for its side-effects to load global type augmentations.
@@ -69,6 +71,10 @@ const App: React.FC = () => {
           </div>
 
           <div className="mt-20 md:mt-32 fade-in fade-in-delay-3">
+            <HowItWorks />
+          </div>
+
+          <div className="mt-20 md:mt-32 fade-in fade-in-delay-4">
             <FAQ />
           </div>
         </main>
