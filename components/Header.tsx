@@ -1,4 +1,7 @@
+
 import React from 'react';
+// FIX: Import `../types` for its side-effects to load global type augmentations.
+import '../types';
 
 export const Header: React.FC = () => {
   return (
@@ -19,7 +22,7 @@ export const Header: React.FC = () => {
               rel="noopener noreferrer"
               className="text-white bg-gradient-to-r from-indigo-500 to-purple-600 hover:from-indigo-600 hover:to-purple-700 rounded-md px-5 py-2.5 text-sm font-semibold transition-all duration-300 ease-in-out shadow-lg shadow-indigo-500/20 hover:shadow-indigo-500/40 focus:outline-none focus:ring-2 focus:ring-purple-500 focus:ring-offset-2 focus:ring-offset-black transform hover:scale-105"
             >
-              Manage Subscriptions
+              My Account
             </a>
           </div>
         </div>

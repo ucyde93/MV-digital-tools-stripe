@@ -1,4 +1,7 @@
+
 import React, { useState } from 'react';
+// FIX: Import `../types` for its side-effects to load global type augmentations.
+import '../types';
 
 const faqData = [
   {
