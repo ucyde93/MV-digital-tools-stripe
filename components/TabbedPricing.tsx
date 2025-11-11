@@ -57,7 +57,7 @@ export const TabbedPricing: React.FC<TabbedPricingProps> = ({ categories }) => {
         ))}
         {indicatorStyle && (
           <div
-            className="absolute bottom-[-1px] h-0.5 bg-indigo-400 transition-all duration-300 ease-in-out"
+            className="absolute bottom-[-1px] h-0.5 bg-indigo-400 transition-all duration-500 ease-[cubic-bezier(0.175,0.885,0.32,1.275)]"
             style={{
               left: `${indicatorStyle.left}px`,
               width: `${indicatorStyle.width}px`,

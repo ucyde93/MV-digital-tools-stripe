@@ -7,7 +7,7 @@ const faqData = [
   {
     question: 'How do I manage my subscriptions?',
     answer:
-      'You can easily manage all your active subscriptions by clicking the "Manage Subscriptions" button in the header. This will take you to your customer portal where you can view and modify your plan details.',
+      'You can easily manage all your active subscriptions by clicking the "My Account" button in the header. This will take you to your customer portal where you can view and modify your plan details.',
   },
   {
     question: 'What is your refund and cancellation policy?',

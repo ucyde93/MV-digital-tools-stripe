@@ -1,4 +1,5 @@
-// FIX: Import React to make its types available for JSX namespace augmentation.
+// FIX: Using a standard `import React from 'react'` and referencing `React.DetailedHTMLProps`
+// resolves issues where base HTML element types were being lost during global JSX augmentation.
 import React from 'react';
 
 export interface PricingCategory {

@@ -74,6 +74,20 @@ const App: React.FC = () => {
         </main>
         <footer className="w-full bg-black/30 border-t border-white/10 backdrop-blur-sm">
           <div className="max-w-7xl mx-auto py-8 px-4 sm:px-6 lg:px-8 text-slate-400">
+            <div className="text-center mb-8">
+              <h3 className="text-lg font-semibold text-white mb-4">Contact Us</h3>
+              <div className="flex flex-col items-center space-y-2 text-slate-300">
+                <p>
+                  WhatsApp/Viber/Call: <a href="tel:+9607566658" className="hover:text-white transition-colors duration-300 font-medium text-slate-200">+960 7566658</a>
+                </p>
+                <p>
+                  Telegram: <a href="https://t.me/mvdigitaltools" target="_blank" rel="noopener noreferrer" className="hover:text-white transition-colors duration-300 font-medium text-slate-200">@mvdigitaltools</a>
+                </p>
+                <p>
+                  Email: <a href="mailto:support@mvdigital.tools" className="hover:text-white transition-colors duration-300 font-medium text-slate-200">support@mvdigital.tools</a>
+                </p>
+              </div>
+            </div>
              <div className="flex justify-center space-x-6 mb-4">
                 <a href="https://www.tiktok.com/@mv_digital_tools" target="_blank" rel="noopener noreferrer" className="hover:text-white transition-colors duration-300">TikTok</a>
                 <a href="https://www.facebook.com/mvDigitalTools" target="_blank" rel="noopener noreferrer" className="hover:text-white transition-colors duration-300">Facebook</a>
