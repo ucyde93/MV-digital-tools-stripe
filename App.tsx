@@ -4,6 +4,7 @@ import * as React from 'react';
 import { Header } from './components/Header';
 import { TabbedPricing } from './components/TabbedPricing';
 import { HowItWorks } from './components/HowItWorks';
+import { WhyChooseUs } from './components/WhyChooseUs';
 import { FAQ } from './components/FAQ';
 import type { PricingCategory } from './types';
 // FIX: Import 'types.ts' for its side-effects to load global type augmentations.
@@ -75,6 +76,10 @@ const App: React.FC = () => {
           </div>
 
           <div className="mt-20 md:mt-32 fade-in fade-in-delay-4">
+            <WhyChooseUs />
+          </div>
+
+          <div className="mt-20 md:mt-32 fade-in fade-in-delay-5">
             <FAQ />
           </div>
         </main>
@@ -98,7 +103,7 @@ const App: React.FC = () => {
                 <a href="https://www.tiktok.com/@mv_digital_tools" target="_blank" rel="noopener noreferrer" className="hover:text-white transition-colors duration-300">TikTok</a>
                 <a href="https://www.facebook.com/mvDigitalTools" target="_blank" rel="noopener noreferrer" className="hover:text-white transition-colors duration-300">Facebook</a>
              </div>
-              <p className="text-center">&copy; {new Date().getFullYear()} MV Digital Tools. All rights reserved.</p>
+              <p className="text-center">&copy; {new Date().getFullYear()} MV DIGITAL TOOLS. All rights reserved.</p>
           </div>
         </footer>
       </div>

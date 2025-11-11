@@ -28,7 +28,7 @@ const faqData = [
   {
     question: 'Are you a legitimate business?',
     answer:
-      'Yes, MV Digital Tools is a fully registered and compliant business entity in both the United States and the Maldives. We operate globally to source and provide the best possible deals on digital subscriptions for our customers.',
+      'Yes, MV DIGITAL TOOLS is a fully registered and compliant business entity in both the United States and the Maldives. We operate globally to source and provide the best possible deals on digital subscriptions for our customers.',
   }
 ];
 

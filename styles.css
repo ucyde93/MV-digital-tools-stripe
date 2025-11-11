@@ -104,3 +104,54 @@ body {
 .fade-in-delay-2 { animation-delay: 0.2s; opacity: 0; }
 .fade-in-delay-3 { animation-delay: 0.3s; opacity: 0; }
 .fade-in-delay-4 { animation-delay: 0.4s; opacity: 0; }
+.fade-in-delay-5 { animation-delay: 0.5s; opacity: 0; }
+
+
+/* How It Works - Icon Animations */
+.icon-animate-plan .line {
+    stroke-dasharray: 20;
+    stroke-dashoffset: 20;
+    transition: stroke-dashoffset 0.4s ease-out;
+}
+.hiw-card:hover .icon-animate-plan .line-1 { stroke-dashoffset: 0; transition-delay: 0s; }
+.hiw-card:hover .icon-animate-plan .line-2 { stroke-dashoffset: 0; transition-delay: 0.1s; }
+.hiw-card:hover .icon-animate-plan .line-3 { stroke-dashoffset: 0; transition-delay: 0.2s; }
+
+.icon-animate-checkout .card-base {
+  transition: transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+.hiw-card:hover .icon-animate-checkout .card-base {
+  transform: translateY(-2px);
+}
+.icon-animate-checkout .lock {
+  opacity: 0;
+  transform: translateY(2px) scale(0.9);
+  transition: opacity 0.3s ease-out 0.2s, transform 0.3s ease-out 0.2s;
+}
+.hiw-card:hover .icon-animate-checkout .lock {
+  opacity: 1;
+  transform: translateY(0) scale(1);
+}
+
+.icon-animate-access .bolt-bg {
+  transform: scaleY(0);
+  transform-origin: bottom;
+  transition: transform 0.3s ease-in;
+}
+.hiw-card:hover .icon-animate-access .bolt-bg {
+  transform: scaleY(1);
+}
+.icon-animate-access .bolt-fg {
+  opacity: 0;
+  transition: opacity 0.2s linear 0.2s;
+}
+.hiw-card:hover .icon-animate-access .bolt-fg {
+  opacity: 1;
+}
+
+.icon-animate-manage .cog {
+  transition: transform 0.8s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+.hiw-card:hover .icon-animate-manage .cog {
+  transform: rotate(180deg);
+}

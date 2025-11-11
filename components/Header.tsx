@@ -12,7 +12,7 @@ export const Header: React.FC = () => {
           <div className="flex-shrink-0">
             <a href="#" className="flex items-center text-2xl font-bold text-white">
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-indigo-400 to-purple-500">
-                MV Digital Tools
+                MV DIGITAL TOOLS
               </span>
             </a>
           </div>
