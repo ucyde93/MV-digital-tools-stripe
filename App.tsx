@@ -1,3 +1,5 @@
+// FIX: Import 'types.ts' for its side-effects to load global type augmentations. This must be the first import.
+import './types';
 import * as React from 'react';
 import { Header } from './components/Header';
 import { TabbedPricing } from './components/TabbedPricing';
@@ -5,8 +7,6 @@ import { HowItWorks } from './components/HowItWorks';
 import { WhyChooseUs } from './components/WhyChooseUs';
 import { FAQ } from './components/FAQ';
 import type { PricingCategory } from './types';
-// FIX: Import 'types.ts' for its side-effects to load global type augmentations.
-import './types';
 
 const pricingCategories: PricingCategory[] = [
   {

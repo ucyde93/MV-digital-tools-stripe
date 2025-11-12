@@ -1,6 +1,6 @@
-import * as React from 'react';
-// FIX: Import `../types` for its side-effects to load global type augmentations for custom elements like <stripe-pricing-table>.
+// FIX: Import `../types` for its side-effects to load global type augmentations for custom elements like <stripe-pricing-table>. This must be the first import.
 import '../types';
+import * as React from 'react';
 import type { PricingCategory } from '../types';
 
 interface TabbedPricingProps {
@@ -47,7 +47,7 @@ export const TabbedPricing: React.FC<TabbedPricingProps> = ({ categories }) => {
             onClick={() => setActiveCategoryName(category.name)}
             className={`relative px-3 md:px-5 py-4 text-sm md:text-base font-medium transition-all duration-300 ease-in-out focus:outline-none focus-visible:ring-2 focus-visible:ring-indigo-400 focus-visible:ring-offset-2 focus-visible:ring-offset-black rounded-t-md transform ${
               activeCategoryName === category.name
-                ? 'text-white'
+                ? 'text-white bg-gradient-to-b from-white/[.05] to-transparent'
                 : 'text-slate-400 hover:text-white hover:bg-white/5 hover:scale-[1.02]'
             }`}
             aria-current={activeCategoryName === category.name ? 'page' : undefined}
@@ -57,11 +57,11 @@ export const TabbedPricing: React.FC<TabbedPricingProps> = ({ categories }) => {
         ))}
         {indicatorStyle && (
           <div
-            className="absolute bottom-[-1px] h-0.5 bg-indigo-400 transition-all duration-500 ease-[cubic-bezier(0.175,0.885,0.32,1.275)]"
+            className="absolute bottom-[-1px] h-0.5 bg-purple-400 transition-all duration-500 ease-[cubic-bezier(0.175,0.885,0.32,1.275)]"
             style={{
               left: `${indicatorStyle.left}px`,
               width: `${indicatorStyle.width}px`,
-              boxShadow: '0 0 10px 1px #818cf8, 0 0 20px 1px #818cf8'
+              boxShadow: '0 0 12px 1px #c084fc, 0 0 20px 1px #c084fc'
             }}
           ></div>
         )}

@@ -1,8 +1,6 @@
-
-
-import * as React from 'react';
-// FIX: Import `../types` for its side-effects to load global type augmentations.
+// FIX: Import `../types` for its side-effects to load global type augmentations. This must be the first import.
 import '../types';
+import * as React from 'react';
 
 const faqData = [
   {

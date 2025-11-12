@@ -1,6 +1,6 @@
-import * as React from 'react';
-// FIX: Import `../types` for its side-effects to load global type augmentations for custom elements like <stripe-pricing-table>.
+// FIX: Import `../types` for its side-effects to load global type augmentations for custom elements like <stripe-pricing-table>. This must be the first import.
 import '../types';
+import * as React from 'react';
 import type { PricingCategory } from '../types';
 
 interface PricingSectionProps {

@@ -2,7 +2,8 @@
 // This allows our augmentation of `JSX.IntrinsicElements` to merge with the standard HTML element types
 // instead of overwriting them, resolving errors for all standard JSX tags.
 import 'react/jsx-runtime';
-import React from 'react';
+// FIX: Changed to namespace import for consistency
+import * as React from 'react';
 
 export interface PricingCategory {
   name: string;

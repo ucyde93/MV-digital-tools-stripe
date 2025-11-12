@@ -1,7 +1,6 @@
-
-
-import * as React from 'react';
+// FIX: Import `../types` for its side-effects to load global type augmentations. This must be the first import.
 import '../types';
+import * as React from 'react';
 
 const features = [
   {
@@ -16,7 +15,7 @@ const features = [
   {
     icon: (
       <svg xmlns="http://www.w3.org/2000/svg" className="h-8 w-8 text-indigo-400" fill="none" viewBox="0 0 24 24" strokeWidth="1.5" stroke="currentColor">
-        <path strokeLinecap="round" strokeLinejoin="round" d="M15.59 14.37a6 6 0 01-5.84 7.38v-4.82m5.84-2.56a12.025 12.025 0 01-4.132 4.032m-4.132-4.032L6.91 9.512a12.025 12.025 0 014.132-4.032m4.132 4.032l-.458-2.56a12.025 12.025 0 00-4.132-4.032m-4.132 4.032L6.91 9.512a12.025 12.025 0 00-4.132 4.032M4.5 12l-.458 2.56a12.025 12.025 0 004.132 4.032m0 0l.458-2.56a12.025 12.025 0 014.132-4.032m-4.132 4.032L9.63 14.37m-3.12-4.86l.458-2.56a12.025 12.025 0 014.132-4.032m0 0l-.458 2.56" />
+        <path strokeLinecap="round" strokeLinejoin="round" d="M15.59 14.37a6 6 0 01-5.84 7.38v-4.82m5.84-2.56a12.025 12.025 0 01-4.132 4.032m-4.132-4.032L6.91 9.512a12.025 12.025 0 014.132-4.032m4.132 4.032l-.458-2.56a12.025 12.025 0 00-4.132-4.032m-4.132-4.032L6.91 9.512a12.025 12.025 0 00-4.132 4.032M4.5 12l-.458 2.56a12.025 12.025 0 004.132 4.032m0 0l.458-2.56a12.025 12.025 0 014.132-4.032m-4.132 4.032L9.63 14.37m-3.12-4.86l.458-2.56a12.025 12.025 0 014.132-4.032m0 0l-.458 2.56" />
       </svg>
     ),
     title: 'Instant Delivery',
