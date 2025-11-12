@@ -1,5 +1,3 @@
-
-
 import * as React from 'react';
 // FIX: Import `../types` for its side-effects to load global type augmentations for custom elements like <stripe-pricing-table>.
 import '../types';
@@ -17,12 +15,16 @@ export const PricingSection: React.FC<PricingSectionProps> = ({ category }) => {
           {category.name}
         </h2>
       </div>
-      <div className="bg-slate-800/50 p-2 rounded-xl shadow-lg ring-1 ring-white/10">
-        <stripe-pricing-table
-          pricing-table-id={category.pricingTableId}
-          publishable-key={category.publishableKey}
-        >
-        </stripe-pricing-table>
+      <div className="space-y-8">
+        {category.pricingTableIds.map(tableId => (
+          <div key={tableId} className="bg-slate-800/50 p-2 rounded-xl shadow-lg ring-1 ring-white/10">
+            <stripe-pricing-table
+              pricing-table-id={tableId}
+              publishable-key={category.publishableKey}
+            >
+            </stripe-pricing-table>
+          </div>
+        ))}
       </div>
     </section>
   );

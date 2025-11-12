@@ -1,5 +1,3 @@
-
-
 import * as React from 'react';
 import { Header } from './components/Header';
 import { TabbedPricing } from './components/TabbedPricing';
@@ -13,27 +11,27 @@ import './types';
 const pricingCategories: PricingCategory[] = [
   {
     name: 'Streaming',
-    pricingTableId: 'prctbl_1SRtplEEfxP3B25SauM1aisV',
+    pricingTableIds: ['prctbl_1SRtplEEfxP3B25SauM1aisV', 'prctbl_1SSVjCEEfxP3B25SaVf8yZup'],
     publishableKey: 'pk_live_51OSNXXEEfxP3B25S2C3EhDuF9TayWZaPwGvdxP6qChRz04raDqGTDDEJLXsUuTCaa2LL6mHWqVpCQ1SeqIWCSmLf0065cANulg',
   },
   {
     name: 'Productivity',
-    pricingTableId: 'prctbl_1SRtt6EEfxP3B25SElGRlcl0',
+    pricingTableIds: ['prctbl_1SRtt6EEfxP3B25SElGRlcl0'],
     publishableKey: 'pk_live_51OSNXXEEfxP3B25S2C3EhDuF9TayWZaPwGvdxP6qChRz04raDqGTDDEJLXsUuTCaa2LL6mHWqVpCQ1SeqIWCSmLf0065cANulg',
   },
   {
     name: 'Video and Photo Design',
-    pricingTableId: 'prctbl_1SRtvoEEfxP3B25SxplmRNRg',
+    pricingTableIds: ['prctbl_1SRtvoEEfxP3B25SxplmRNRg'],
     publishableKey: 'pk_live_51OSNXXEEfxP3B25S2C3EhDuF9TayWZaPwGvdxP6qChRz04raDqGTDDEJLXsUuTCaa2LL6mHWqVpCQ1SeqIWCSmLf0065cANulg',
   },
   {
     name: 'AI Tools',
-    pricingTableId: 'prctbl_1SRtwrEEfxP3B25Sp7Zj83e7',
+    pricingTableIds: ['prctbl_1SRtwrEEfxP3B25Sp7Zj83e7'],
     publishableKey: 'pk_live_51OSNXXEEfxP3B25S2C3EhDuF9TayWZaPwGvdxP6qChRz04raDqGTDDEJLXsUuTCaa2LL6mHWqVpCQ1SeqIWCSmLf0065cANulg',
   },
   {
     name: 'Financial',
-    pricingTableId: 'prctbl_1SS8gJEEfxP3B25Sq0yajQiC',
+    pricingTableIds: ['prctbl_1SS8gJEEfxP3B25Sq0yajQiC'],
     publishableKey: 'pk_live_51OSNXXEEfxP3B25S2C3EhDuF9TayWZaPwGvdxP6qChRz04raDqGTDDEJLXsUuTCaa2LL6mHWqVpCQ1SeqIWCSmLf0065cANulg',
   },
 ];
@@ -99,6 +97,29 @@ const App: React.FC = () => {
                 </p>
               </div>
             </div>
+
+            {/* Trust Badges */}
+            <div className="flex flex-col sm:flex-row justify-center items-center gap-6 sm:gap-10 my-10 text-slate-300">
+              <div className="flex items-center space-x-2 text-sm">
+                <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6 text-green-400" fill="none" viewBox="0 0 24 24" strokeWidth="1.5" stroke="currentColor">
+                  <path strokeLinecap="round" strokeLinejoin="round" d="M9 12.75L11.25 15 15 9.75m-3-7.036A11.959 11.959 0 013.598 6 11.99 11.99 0 003 9.749c0 5.592 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.31-.21-2.571-.598-3.751h-.152c-3.196 0-6.1-1.248-8.25-3.286zm0 13.036h.008v.008h-.008v-.008z" />
+                </svg>
+                <span>SSL Secured</span>
+              </div>
+              <div className="flex items-center space-x-2 text-sm">
+                <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6 text-indigo-400" fill="none" viewBox="0 0 24 24" strokeWidth="1.5" stroke="currentColor">
+                    <path strokeLinecap="round" strokeLinejoin="round" d="M2.25 8.25h19.5M2.25 9h19.5m-16.5 5.25h6m-6 2.25h3M3.75 21h16.5a2.25 2.25 0 002.25-2.25V5.25a2.25 2.25 0 00-2.25-2.25H3.75a2.25 2.25 0 00-2.25 2.25v13.5a2.25 2.25 0 002.25 2.25z" />
+                </svg>
+                <span>Stripe Secure Payments</span>
+              </div>
+              <div className="flex items-center space-x-2 text-sm">
+                <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6 text-purple-400" fill="none" viewBox="0 0 24 24" strokeWidth="1.5" stroke="currentColor">
+                  <path strokeLinecap="round" strokeLinejoin="round" d="M9 12.75L11.25 15 15 9.75M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+                </svg>
+                <span>Satisfaction Guarantee</span>
+              </div>
+            </div>
+
              <div className="flex justify-center space-x-6 mb-4">
                 <a href="https://www.tiktok.com/@mv_digital_tools" target="_blank" rel="noopener noreferrer" className="hover:text-white transition-colors duration-300">TikTok</a>
                 <a href="https://www.facebook.com/mvDigitalTools" target="_blank" rel="noopener noreferrer" className="hover:text-white transition-colors duration-300">Facebook</a>

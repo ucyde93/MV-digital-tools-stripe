@@ -1,13 +1,12 @@
-// FIX: Using a standard `import React from 'react'` and referencing `React.DetailedHTMLProps`
-// resolves issues where base HTML element types were being lost during global JSX augmentation.
-// FIX: The import style for React was inconsistent with the rest of the application.
-// Using `import * as React from 'react'` ensures that TypeScript correctly merges
-// the JSX namespace augmentation, resolving errors for all standard HTML elements.
-import * as React from 'react';
+// FIX: By importing 'react/jsx-runtime', we ensure that the base JSX type definitions are loaded.
+// This allows our augmentation of `JSX.IntrinsicElements` to merge with the standard HTML element types
+// instead of overwriting them, resolving errors for all standard JSX tags.
+import 'react/jsx-runtime';
+import React from 'react';
 
 export interface PricingCategory {
   name: string;
-  pricingTableId: string;
+  pricingTableIds: string[];
   publishableKey: string;
 }
 

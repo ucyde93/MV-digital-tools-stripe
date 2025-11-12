@@ -70,14 +70,21 @@ export const TabbedPricing: React.FC<TabbedPricingProps> = ({ categories }) => {
       {/* Pricing table content */}
       {activeCategory && (
         <div
-          key={activeCategory.pricingTableId}
-          className="bg-black/30 p-2 rounded-2xl shadow-2xl shadow-indigo-900/20 ring-1 ring-white/10 backdrop-blur-md fade-in"
+          key={activeCategory.name}
+          className="fade-in space-y-8"
         >
-          <stripe-pricing-table
-            pricing-table-id={activeCategory.pricingTableId}
-            publishable-key={activeCategory.publishableKey}
-          >
-          </stripe-pricing-table>
+          {activeCategory.pricingTableIds.map(tableId => (
+            <div
+              key={tableId}
+              className="bg-black/30 p-2 rounded-2xl shadow-2xl shadow-indigo-900/20 ring-1 ring-white/10 backdrop-blur-md"
+            >
+              <stripe-pricing-table
+                pricing-table-id={tableId}
+                publishable-key={activeCategory.publishableKey}
+              >
+              </stripe-pricing-table>
+            </div>
+          ))}
         </div>
       )}
     </div>
