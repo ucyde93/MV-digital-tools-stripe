@@ -16,7 +16,7 @@ const pricingCategories: PricingCategory[] = [
   },
   {
     name: 'Productivity',
-    pricingTableIds: ['prctbl_1SRtt6EEfxP3B25SElGRlcl0'],
+    pricingTableIds: ['prctbl_1SRtt6EEfxP3B25SElGRlcl0', 'prctbl_1SStxwEEfxP3B25SRg7SRcU4'],
     publishableKey: 'pk_live_51OSNXXEEfxP3B25S2C3EhDuF9TayWZaPwGvdxP6qChRz04raDqGTDDEJLXsUuTCaa2LL6mHWqVpCQ1SeqIWCSmLf0065cANulg',
   },
   {
@@ -26,7 +26,7 @@ const pricingCategories: PricingCategory[] = [
   },
   {
     name: 'AI Tools',
-    pricingTableIds: ['prctbl_1SRtwrEEfxP3B25Sp7Zj83e7'],
+    pricingTableIds: ['prctbl_1SRtwrEEfxP3B25Sp7Zj83e7', 'prctbl_1SUMQPEEfxP3B25Sh0a76hpk'],
     publishableKey: 'pk_live_51OSNXXEEfxP3B25S2C3EhDuF9TayWZaPwGvdxP6qChRz04raDqGTDDEJLXsUuTCaa2LL6mHWqVpCQ1SeqIWCSmLf0065cANulg',
   },
   {
