@@ -1,6 +1,4 @@
-// FIX: The `import 'react/jsx-runtime'` was incorrectly causing the base JSX types to be overwritten.
-// Removing it and relying solely on `import * as React from 'react'` ensures that the JSX namespace
-// is correctly augmented, not replaced, fixing errors for all standard JSX elements.
+import * as React from 'react';
 
 export interface PricingCategory {
   name: string;
@@ -8,7 +6,8 @@ export interface PricingCategory {
   publishableKey: string;
 }
 
-// Extend JSX to recognize the Stripe custom element
+// Augment the global JSX namespace to add custom elements.
+// This avoids overwriting the global JSX namespace and ensures standard elements like 'div' remain available.
 declare global {
   namespace JSX {
     interface IntrinsicElements {

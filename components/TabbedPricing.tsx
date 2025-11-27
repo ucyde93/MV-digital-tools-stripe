@@ -1,3 +1,4 @@
+
 // FIX: Import `../types` for its side-effects to load global type augmentations for custom elements like <stripe-pricing-table>. This must be the first import.
 import '../types';
 import * as React from 'react';
@@ -71,7 +72,7 @@ export const TabbedPricing: React.FC<TabbedPricingProps> = ({ categories }) => {
       {activeCategory && (
         <div
           key={activeCategory.name}
-          className="fade-in space-y-8"
+          className="tab-content-animate space-y-8"
         >
           {activeCategory.pricingTableIds.map(tableId => (
             <div
